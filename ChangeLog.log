@@ -1,0 +1,35 @@
+We're planning on making some changes to the supported plugin Python versions.
+See the Blog post for more details.
+New Features and Improvements
+
+    Sidebar can now be moved to the right side using the "sidebar_on_right" setting
+    Build systems can now optionally have an input box by using "interactive": true
+    Added "disable_plugin_host_3.3" setting. This causes all plugins to run under 3.8
+    Rewritten syntax highlighting for SQL, ActionScript, Diff, Bash and Graphviz thanks to jrappen, michaelblyons, keith-hall and deathaxe
+    Added Zsh and TOML syntax highlighting thanks to deathaxe
+    Various syntax highlighting improvements
+    Improved git status performance
+    Significantly improved performance when editing with many selections
+    Commands passed via the command line are now delayed until files and plugins have loaded
+    Built-in color schemes now specially highlight string mapping keys
+    Improved behavior of copy/cut with multiple empty selections
+    Tab translation is now disabled when reading from stdin
+    Improved handling of saving files in non-existent directories
+    Added "default_font_size" setting
+    Added "reload_file_in_background" setting
+    Added "set_unsaved_view_name_for_syntax" setting
+    Allow variable expansion in a syntax's first_line_match regex
+    API: Added Window.create_io_panel and Window.find_io_panel
+    API: Added Selection.has_empty_region, Selection.has_non_empty_region and Selection.has_multiple_non_empty_regions
+
+Fixes
+
+    Fixed wrap_lines command not understanding newer ruler settings
+    Fixed bookmarks not toggling at EOF
+    Fixed an issue with click event handling on the scroll bar
+    Fixed build system errors not having the correct PATH
+    Fixed index crawler leaking shared memory in special cases
+    Fixed local transformed symbols having the wrong region
+    Fixed find_under_expand edge case
+    Fixed uneven indent guide rendering with fractional dpi scaling
+    Fixed certain minimap settings incorrectly affecting text rendering
